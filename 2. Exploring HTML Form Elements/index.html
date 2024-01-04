@@ -8,25 +8,84 @@
 <body>
     <h1>HTML Form Example</h1>
     <!-- TODO 2.1: Add the container for the form. It should POST to "/submit_form"  -->
-    
+    <form action="/submit_form" method="POST">
         <!-- TODO 2.2: Add a first name text field -->
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName">
+        </div>
 
         <!-- TODO 2.3: Add a last name text field. The field must be required. -->
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
 
         <!-- TODO 2.4: Add an email text field. The field must be read only. -->
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" readonly>
+        </div>
 
         <!-- TODO 2.5: Add an address text field. The field must be disabled. -->
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" disabled>
+        </div>
+        <br>
 
-        <!-- TODO 2.6: Add a year level dropdown. The inital selected value must be "Select an option", but it must not be a valid selection. -->
+        <!-- TODO 2.6: Add a year level dropdown. The initial selected value must be "Select an option", but it must not be a valid selection. -->
+        <div>
+            <label for="yearLevel">Year Level:</label>
+            <select id="yearLevel" name="yearLevel">
+                <option value="" selected disabled>Select an option</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+        </div>
+        <br>
 
         <!-- TODO 2.7: Add radio buttons that ask which learning mode the user prefers -->
+        <strong>Learning Mode:</strong>
+        <div>
+            <input type="radio" id="faceToFace" name="learningMode" value="faceToFace">
+            <label for="faceToFace">Face To Face</label>
+            <input type="radio" id="synchronous" name="learningMode" value="synchronous">
+            <label for="synchronous">Synchronous</label>
+            <input type="radio" id="asynchronous" name="learningMode" value="asynchronous">
+            <label for="asynchronous">Asynchronous</label>
+        </div>
+        <br>
 
         <!-- TODO 2.8: Add check boxes that ask which subjects the user has taken -->
-       
+        <strong>Courses Taken (Computer Science):</strong>
+        <div>
+            <input type="checkbox" id="maths" name="subject" value="maths">
+            <label for="maths">Mathematics</label>
+            <input type="checkbox" id="algorithms" name="subject" value="algorithms">
+            <label for="algorithms">Algorithms and Data Structures</label>
+            <input type="checkbox" id="programming" name="subject" value="programming">
+            <label for="programming">Programming Fundamentals</label>
+            <input type="checkbox" id="databases" name="subject" value="databases">
+            <label for="databases">Databases</label>
+            <input type="checkbox" id="networks" name="subject" value="networks">
+            <label for="networks">Computer Networks</label>
+        </div>
+        <br>
+
         <!-- TODO 2.9: Add a text area that asks the user if they would prefer to be a cactus or a shark -->
+        <label for="preference">Would you prefer to be a cactus or a shark?</label>
+        <div>
+            <textarea id="preference" name="preference" rows="4" cols="50"></textarea>
+        </div>
 
         <!-- TODO 2.10: Add a submit button -->
-
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
 </body>
 
 </html>
