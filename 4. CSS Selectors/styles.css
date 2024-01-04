@@ -1,41 +1,77 @@
 /* TODO 4.1: select all elements */
-___ {
+* {
     padding: 0;
     margin: 0;
 }
 
 /* TODO 4.2: Select the <p> element */
-___ {
+p {
     color: blue;
 }
 
 /* TODO 4.3: Select the elements with the class "text" */
-___ {
+.text {
     font-size: 20px;
 }
 
 /* TODO 4.4: Select the element with the id "unique" */
-___ {
+#unique {
     background-color: yellow;
 }
 
 /* TODO 4.5: Select the element with the classes "title" or "text" in one query selector */
-___ {
+.title, .text {
     text-align: center;
 }
 
 /* TODO 4.6: Select the descendant of body with the class "common" */
-___ {
+body .common {
     border: 2px solid black;
 }
 
 /* TODO 4.7: Select the element whose target attribute is set to "_blank" */
-___ {
+a[target="_blank"] {
     color: red;
 }
 
 /* TODO 4.8: Select the first letter of <p> elements */
-___ {
+p::first-letter {
     font-size: 200%;
     color: blue;
+}
+
+body {
+    background: linear-gradient(to right, #ffcccb, #bfefff);
+}
+
+h1.title {
+    background-color: #336699;
+    color: #fff;
+    padding: 10px;
+}
+
+.common {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.common:nth-child(2) {
+    background-color: #ffcccb;
+}
+
+.common:nth-child(3) {
+    background-color: #bfefff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#unique + .common {
+    font-weight: bold;
+}
+
+.common:last-child {
+    font-style: italic;
 }
